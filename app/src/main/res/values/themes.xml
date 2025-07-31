@@ -1,0 +1,5 @@
+<resources>
+
+    <style name="My.AppTheme" parent="Theme.Material3Expressive.DynamicColors.DayNight.NoActionBar" />
+
+</resources>

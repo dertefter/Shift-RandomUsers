@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="radius_max">32dp</dimen>
+    <dimen name="radius">24dp</dimen>
+    <dimen name="radius_min">12dp</dimen>
+    <dimen name="radius_micro">6dp</dimen>
+
+    <dimen name="margin_max">24dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_min">4dp</dimen>
+
+    <dimen name="margin_micro">2dp</dimen>
+
+</resources>
+
+

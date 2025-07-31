@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:liftOnScroll="true"
+        app:liftOnScrollColor="?attr/colorSecondaryContainer">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:animateLayoutChanges="true"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:title="RandromUsers"></androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="@dimen/margin_max"
+            android:text="Произошла ошибка при загрузке списка пользователей"
+            android:textColor="?attr/colorError"
+            android:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/statusCard"
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_max"
+            android:layout_marginVertical="@dimen/margin_min"
+            android:animateLayoutChanges="false"
+            android:clickable="true"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="@dimen/radius_max">>
+
+            <LinearLayout
+                android:id="@+id/done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="?attr/colorSecondaryContainer"
+                android:divider="@drawable/divider_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:showDividers="middle">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/colorSecondaryContainer"
+                    android:backgroundTint="?attr/colorSecondary"
+                    app:contentPadding="8dp"
+                    app:shapeAppearance="@style/FullCircular"
+                    app:srcCompat="@drawable/ic_refresh"
+                    app:tint="?attr/colorOnSecondary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Обновить список пользователей"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge.Emphasized"
+                    android:textColor="?attr/colorOnSecondaryContainer" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="?attr/colorPrimaryContainer"
+                android:divider="@drawable/divider_horizontal"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:showDividers="middle"
+                android:visibility="gone">
+
+                <com.google.android.material.loadingindicator.LoadingIndicator
+                    style="@style/Widget.Material3.LoadingIndicator.Contained"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:containerColor="?attr/colorOnPrimaryContainer"
+                    app:indicatorColor="?attr/colorOnPrimary"
+                    app:indicatorSize="32dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Обновление"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelLarge.Emphasized"
+                    android:textColor="?attr/colorOnPrimaryContainer" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/margin"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

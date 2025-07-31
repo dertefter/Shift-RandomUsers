@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_micro"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="?attr/colorSurfaceContainer"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_vertical_min"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_max"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/expanded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/picture_exp"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    app:shapeAppearance="@style/Medium"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <Button
+                    android:id="@+id/collapse"
+                    style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    app:icon="@drawable/ic_up" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/name_exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium.Emphasized" />
+
+            <Button
+                android:id="@+id/phone_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondaryContainer"
+                android:text="phone_button"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                app:icon="@drawable/ic_phone"
+                app:iconTint="?attr/colorOnSecondaryContainer" />
+
+            <Button
+                android:id="@+id/location_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondaryContainer"
+                android:text="Button"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                app:icon="@drawable/ic_location"
+                app:iconTint="?attr/colorOnSecondaryContainer" />
+
+            <Button
+                android:id="@+id/mail_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondaryContainer"
+                android:text="Button"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                app:icon="@drawable/ic_mail"
+                app:iconTint="?attr/colorOnSecondaryContainer" />
+
+            <Button
+                android:id="@+id/more_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorSecondary"
+                android:text="Подробнее"
+                android:textColor="?attr/colorOnSecondary"
+                app:iconTint="?attr/colorOnSecondary" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/collapsed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider_horizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:visibility="gone">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/picture"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="0"
+                app:shapeAppearance="@style/FullCircular"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium.Emphasized" />
+
+            <Button
+                android:id="@+id/expand_button"
+                style="@style/Widget.Material3Expressive.Button.IconButton.Tonal"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="0"
+                app:icon="@drawable/ic_down" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
