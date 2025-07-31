@@ -23,7 +23,7 @@
             android:layout_height="?attr/actionBarSize"
             android:animateLayoutChanges="true"
             app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
-            app:title="RandromUsers"></androidx.appcompat.widget.Toolbar>
+            app:title="Randrom Users App"></androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:id="@+id/error"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:paddingHorizontal="@dimen/margin_max"
-            android:text="Произошла ошибка при загрузке списка пользователей"
+            android:text="An error occurred while loading the user list"
             android:textColor="?attr/colorError"
             android:visibility="gone" />
 
@@ -73,7 +73,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Обновить список пользователей"
+                    android:text="Update users list"
                     android:textAppearance="@style/TextAppearance.Material3.LabelLarge.Emphasized"
                     android:textColor="?attr/colorOnSecondaryContainer" />
 
@@ -104,7 +104,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Обновление"
+                    android:text="Updating..."
                     android:textAppearance="@style/TextAppearance.Material3.LabelLarge.Emphasized"
                     android:textColor="?attr/colorOnPrimaryContainer" />
 
